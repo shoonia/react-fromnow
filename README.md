@@ -1,0 +1,3 @@
+# react-fromnow
+
+## [MIT](./LICENSE)

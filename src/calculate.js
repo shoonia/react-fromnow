@@ -5,23 +5,25 @@ const YEAR = DAY * 365;
 const MONTH = DAY * 30;
 
 function getPeriods(abs) {
-  return {
-    year: abs / YEAR,
-    month: (abs % YEAR) / MONTH,
-    day: (abs % MONTH) / DAY,
-    hour: (abs % DAY) / HOUR,
-    minute: (abs % HOUR) / MIN,
-  };
+  return [
+    ['minute', (abs % HOUR) / MIN],
+    ['hour', (abs % DAY) / HOUR],
+    ['day', (abs % MONTH) / DAY],
+    ['month', (abs % YEAR) / MONTH],
+    ['year', abs / YEAR],
+  ];
 }
 
 function getInterval(periods) {
-  for (const k in periods) {
-    const val = periods[k] | 0;
+  let i = periods.length;
+
+  while (i-- > 0) {
+    const val = ~~periods[i][1]; // it's the same as Math.floor(); but it faster
 
     if (val > 0) {
-      const time = (val === 1) ? k : `${k}s`;
+      const period = periods[i][0];
 
-      return `${val} ${time}`;
+      return (val + ' ' + ((val === 1) ? period : (period + 's')));
     }
   }
 
