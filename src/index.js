@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-const calculate = require('./calculate');
+import calculate from './calculate';
 
 function Fromnow({ tag, date, ...rest }) {
   const del = new Date(date);
@@ -20,4 +20,4 @@ Fromnow.defaultProps = {
   tag: 'time'
 };
 
-module.exports = Fromnow;
+export default Fromnow;

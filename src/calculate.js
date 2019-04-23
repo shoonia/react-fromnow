@@ -30,7 +30,7 @@ function getInterval(periods) {
   return '';
 }
 
-module.exports = function (timestamp) {
+export default function (timestamp) {
   const del = timestamp - Date.now();
   const abs = Math.abs(del);
 

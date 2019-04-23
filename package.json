@@ -2,10 +2,18 @@
   "name": "react-fromnow",
   "version": "0.1.0",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
