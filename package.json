@@ -1,7 +1,7 @@
 {
   "name": "react-fromnow",
-  "description": "",
-  "version": "1.0.0",
+  "description": "React component for display time from now",
+  "version": "1.0.1",
   "main": "es5/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -39,6 +39,7 @@
   "keywords": [
     "react",
     "fromnow",
+    "from now",
     "react-fromnow",
     "moment"
   ],

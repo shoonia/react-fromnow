@@ -1,5 +1,7 @@
 # react-fromnow
 
+React component for display time from now
+
 ## Installing
 
 ```bash
@@ -28,6 +30,8 @@ ReactDOM.render(
 
 ## Set tag
 
+Default use HTML tag [`<time>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
+
 ```js
 <Fromnow tag="span" date={Date.now() - (1e3 * 60 * 60)} />
 ```
@@ -37,8 +41,10 @@ ReactDOM.render(
 
 ## No tag
 
+Set any false expression `"" | false | null | undefined ` and component return just string.
+
 ```js
-<Fromnow tag={null} date={Date.now() + (1e3 * 60 * 60)} />
+<Fromnow tag="" date={Date.now() + (1e3 * 60 * 60)} />
 ```
 ```html
 "1 hour from now"
@@ -53,4 +59,6 @@ ReactDOM.render(
 <time class="from__now" dateTime="2019-04-23T11:30:29.910Z">2 hours ago</time>
 ```
 
-## [MIT](./LICENSE)
+## License
+
+[MIT](./LICENSE)

@@ -39,3 +39,9 @@ test('Invalid date and className', () => {
   equal(props.dateTime, undefined);
   equal(children, undefined);
 });
+
+test('Invalid date and no tag', () => {
+  const empty = render(<Fromnow date={'0_0'} tag="" />);
+
+  equal(empty, '');
+});
