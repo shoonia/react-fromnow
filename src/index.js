@@ -7,13 +7,20 @@ function Fromnow({ tag, date, ...rest }) {
   const timestamp = del.getTime();
 
   if (isNaN(timestamp)) {
-    return React.createElement(tag);
+    return tag ? React.createElement(tag, rest) : '';
   }
 
-  const time = calculate(timestamp);
-  const dateTime = del.toISOString();
+  if (!tag) {
+    return calculate(timestamp);
+  }
 
-  return React.createElement(tag, { ...rest, dateTime }, time);
+  const attrName = tag === 'time' ? 'dateTime' : 'data-datetime';
+  const props = {
+    ...rest,
+    [attrName]: del.toISOString(),
+  };
+
+  return React.createElement(tag, props, calculate(timestamp));
 }
 
 Fromnow.defaultProps = {

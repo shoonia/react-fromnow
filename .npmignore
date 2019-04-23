@@ -1,0 +1,9 @@
+node_modules/
+__tests__/
+
+*.log*
+*.tgz*
+
+.babelrc
+.gitignore
+webpack.config.js
