@@ -1,8 +1,8 @@
 const MIN = 60 * 1e3;
 const HOUR = MIN * 60;
 const DAY = HOUR * 24;
-const YEAR = DAY * 365;
 const MONTH = DAY * 30;
+const YEAR = DAY * 365;
 
 function getPeriods(abs) {
   return [
@@ -17,13 +17,13 @@ function getPeriods(abs) {
 function getInterval(periods) {
   let i = periods.length;
 
-  while (i-- > 0) {
+  while (0 < i--) {
     const val = ~~periods[i][1]; // it's the same as Math.floor(); but it faster
 
-    if (val > 0) {
+    if (0 < val) {
       const period = periods[i][0];
 
-      return (val + ' ' + ((val === 1) ? period : (period + 's')));
+      return (val + ' ' + ((1 === val) ? period : (period + 's')));
     }
   }
 
@@ -41,5 +41,5 @@ export default function (timestamp) {
   const periods = getPeriods(abs);
   const interval = getInterval(periods);
 
-  return interval + ((del < 0) ? ' ago' : ' from now');
+  return interval + ((0 > del) ? ' ago' : ' from now');
 }

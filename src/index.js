@@ -7,7 +7,9 @@ function Fromnow({ tag, date, ...rest }) {
   const timestamp = del.getTime();
 
   if (isNaN(timestamp)) {
-    return tag ? React.createElement(tag, rest) : '';
+    return tag
+      ? React.createElement(tag, rest)
+      : '';
   }
 
   if (!tag) {
