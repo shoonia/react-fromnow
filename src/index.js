@@ -2,7 +2,7 @@ import React from 'react';
 
 import calculate from './calculate';
 
-function Fromnow({ tag, date, ...rest }) {
+function Fromnow({ tag, date, lang, ...rest }) {
   const del = new Date(date);
   const timestamp = del.getTime();
 
@@ -13,7 +13,7 @@ function Fromnow({ tag, date, ...rest }) {
   }
 
   if (!tag) {
-    return calculate(timestamp);
+    return calculate(timestamp, lang);
   }
 
   const attrName = tag === 'time' ? 'dateTime' : 'data-datetime';
@@ -22,7 +22,7 @@ function Fromnow({ tag, date, ...rest }) {
     [attrName]: del.toISOString(),
   };
 
-  return React.createElement(tag, props, calculate(timestamp));
+  return React.createElement(tag, props, calculate(timestamp, lang));
 }
 
 Fromnow.defaultProps = {
