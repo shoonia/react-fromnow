@@ -11,7 +11,7 @@ export default function (ops) {
     }
 
     const pattern = isAgo ? ops.was : ops.will;
-    const val = (1 === int) ? period : period + 's';
+    const val = (2 > int) ? period : period + 's';
 
     return pattern.replace(/%%/, `${int} ${val}`);
   }
