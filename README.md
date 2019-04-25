@@ -75,6 +75,7 @@ Set any false expression `"" | false | null | undefined ` and component return j
 | Russian (Русский)     | 'react-fromnow/ru'           |
 | Ukrainian (Українська)| 'react-fromnow/ua'           |
 
+
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -122,8 +123,8 @@ const date = Date.now() - (1e3 * 60 * 60 * 5);
 
 **default**
 
-| Language               | now          | was             | ago           |
-| ---------------------- | ------------ | ---------------- | --------------|
+| Language               | now          | was             | will          |
+| ---------------------- | ------------ | --------------- | --------------|
 | English                | 'just now'   | '%% ago'        | '%% from now' |
 | Russian (Русский)      | 'только что' | '%% назад'      | 'через %%     |
 | Ukrainian (Українська) | 'зараз'      | '%% тому назад' | 'через %%     |
