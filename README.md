@@ -97,6 +97,37 @@ ReactDOM.render(
 </time>
 ```
 
+## Language configuration
+
+Use the `%%` key for insert date.
+
+```js
+import en from 'react-fromnow/en';
+
+const lang = en({
+  now: 'just now',
+  was: '%% AGO!!!', // change
+  will: '%% from now',
+});
+
+const date = Date.now() - (1e3 * 60 * 60 * 5);
+
+<Fromnow date={date} lang={lang} />
+```
+```html
+<time dateTime="2019-04-23T08:30:29.910Z">
+  5 hours AGO!!!
+</time>
+```
+
+**default**
+
+| Language               | now          | was             | ago           |
+| ---------------------- | ------------ | ---------------- | --------------|
+| English                | 'just now'   | '%% ago'        | '%% from now' |
+| Russian (Русский)      | 'только что' | '%% назад'      | 'через %%     |
+| Ukrainian (Українська) | 'зараз'      | '%% тому назад' | 'через %%     |
+
 ## License
 
 [MIT](./LICENSE)
