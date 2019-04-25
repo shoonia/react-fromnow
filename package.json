@@ -1,9 +1,9 @@
 {
   "name": "react-fromnow",
-  "description": "React component for display time from now",
-  "version": "1.1.0",
-  "main": "es5/index.js",
-  "module": "src/index.js",
+  "description": "React component for display time from now (en, ua, ru)",
+  "version": "2.0.0",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "build": "webpack",
     "test": "jest"
@@ -26,8 +26,11 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "files": [
-    "src",
-    "es5"
+    "index.js",
+    "calculate.js",
+    "en.js",
+    "ua.js",
+    "ru.js"
   ],
   "repository": {
     "type": "git",

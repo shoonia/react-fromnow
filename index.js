@@ -1,6 +1,7 @@
 import React from 'react';
 
 import calculate from './calculate';
+import en from './en';
 
 function Fromnow({ tag, date, lang, ...rest }) {
   const del = new Date(date);
@@ -26,7 +27,8 @@ function Fromnow({ tag, date, lang, ...rest }) {
 }
 
 Fromnow.defaultProps = {
-  tag: 'time'
+  tag: 'time',
+  lang: en(),
 };
 
 export default Fromnow;

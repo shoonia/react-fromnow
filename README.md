@@ -2,6 +2,8 @@
 
 React component for display time from now
 
+[Language support](#language-support): English, Українська, Русский
+
 ## Installing
 
 ```bash
@@ -25,18 +27,22 @@ ReactDOM.render(
 );
 ```
 ```html
-<time dateTime="2019-04-23T13:30:29.910Z">just now</time>
+<time dateTime="2019-04-23T13:30:29.910Z">
+  just now
+</time>
 ```
 
 ## Set tag
 
-Default use HTML tag [`<time>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
+Default use HTML tag `<time>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
 
 ```js
 <Fromnow tag="span" date={Date.now() - (1e3 * 60 * 60)} />
 ```
 ```html
-<span data-datetime="2019-04-23T12:30:29.910Z">1 hour ago</span>
+<span data-datetime="2019-04-23T12:30:29.910Z">
+  1 hour ago
+</span>
 ```
 
 ## No tag
@@ -56,7 +62,39 @@ Set any false expression `"" | false | null | undefined ` and component return j
 <Fromnow className="from__now" date={Date.now() - (1e3 * 60 * 60 * 2)} />
 ```
 ```html
-<time class="from__now" dateTime="2019-04-23T11:30:29.910Z">2 hours ago</time>
+<time class="from__now" dateTime="2019-04-23T11:30:29.910Z">
+  2 hours ago
+</time>
+```
+
+## Language support
+
+| Language              | `import`                     |
+| --------------------- | ---------------------------- |
+| English               | 'react-fromnow/en' (default) |
+| Russian (Русский)     | 'react-fromnow/ru'           |
+| Ukrainian (Українська)| 'react-fromnow/ua'           |
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Fromnow from 'react-fromnow';
+import ua from 'react-fromnow/ua';
+
+const lang = ua();
+const date = Date.now() - (1e3 * 60 * 60 * 2);
+
+ReactDOM.render(
+  <Fromnow date={date} lang={lang} />,
+  document.getElementById('root')
+);
+```
+
+```html
+<time dateTime="2019-04-23T11:30:29.910Z">
+  2 години тому назад
+</time>
 ```
 
 ## License

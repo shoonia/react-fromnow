@@ -2,7 +2,7 @@ import assert from 'assert';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Fromnow from '../src';
+import Fromnow from '../index';
 
 const NOW = 1556026229910;
 
