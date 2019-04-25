@@ -71,9 +71,9 @@ Set any false expression `"" | false | null | undefined ` and component return j
 
 | Language              | `import`                     |
 | --------------------- | ---------------------------- |
-| English               | 'react-fromnow/en' (default) |
-| Russian (Русский)     | 'react-fromnow/ru'           |
-| Ukrainian (Українська)| 'react-fromnow/ua'           |
+| English               | "react-fromnow/en" (default) |
+| Russian (Русский)     | "react-fromnow/ru"           |
+| Ukrainian (Українська)| "react-fromnow/ua"           |
 
 
 ```js
@@ -107,7 +107,7 @@ import en from 'react-fromnow/en';
 
 const lang = en({
   now: 'just now',
-  was: '%% AGO!!!', // change
+  was: '%% AGO!!!', // changed
   will: '%% from now',
 });
 
@@ -125,9 +125,9 @@ const date = Date.now() - (1e3 * 60 * 60 * 5);
 
 | Language               | now          | was             | will          |
 | ---------------------- | ------------ | --------------- | --------------|
-| English                | 'just now'   | '%% ago'        | '%% from now' |
-| Russian (Русский)      | 'только что' | '%% назад'      | 'через %%     |
-| Ukrainian (Українська) | 'зараз'      | '%% тому назад' | 'через %%     |
+| English                | "just now"   | "%% ago"        | "%% from now" |
+| Russian (Русский)      | "только что" | "%% назад"      | "через %%"    |
+| Ukrainian (Українська) | "зараз"      | "%% тому назад" | "через %%"    |
 
 ## License
 
