@@ -1,7 +1,7 @@
 {
   "name": "react-fromnow",
   "description": "React component for display time from now (en, ua, ru)",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -17,9 +17,7 @@
     "jest": "^24.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1"
+    "react-test-renderer": "^16.8.6"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
