@@ -15,7 +15,7 @@ export default function (ops) {
     will: 'через %%',
   };
 
-  return function ru(int, period, isAgo) {
+  return function ua(int, period, isAgo) {
     if (0 === int) {
       return ops.now;
     }
