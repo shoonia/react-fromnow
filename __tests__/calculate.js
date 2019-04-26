@@ -1,7 +1,7 @@
 import assert from 'assert';
 
 import calc from '../lib/calculate';
-import en from '../en';
+import { en } from '../index';
 
 const NOW = 1556026229910; // Tue Apr 23 2019 16:30:29 GMT+0300 (Eastern European Summer Time)
 

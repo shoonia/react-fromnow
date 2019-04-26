@@ -80,8 +80,7 @@ Set any false expression `"" | false | null | undefined ` and component return j
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Fromnow from 'react-fromnow';
-import ua from 'react-fromnow/ua';
+import Fromnow, { ua } from 'react-fromnow';
 
 const lang = ua();
 const date = Date.now() - (1e3 * 60 * 60 * 2);
@@ -103,7 +102,7 @@ ReactDOM.render(
 Use the `%%` key for insert date.
 
 ```js
-import en from 'react-fromnow/en';
+import Fromnow, { en } from 'react-fromnow/en';
 
 const lang = en({
   now: 'just now',
@@ -128,6 +127,43 @@ const date = Date.now() - (1e3 * 60 * 60 * 5);
 | English                | "just now"   | "%% ago"        | "%% from now" |
 | Russian (Русский)      | "только что" | "%% назад"      | "через %%"    |
 | Ukrainian (Українська) | "зараз"      | "%% тому назад" | "через %%"    |
+
+## Use `fromnow()`
+
+```js
+import { createFromnow } from 'react-fromnow';
+
+// initialized
+const useFromnow = createFromnow();
+
+// english default
+useFromnow(Date.now() - (1e3 * 60 * 60 * 4)); // "4 hours ago"
+```
+
+**language**
+
+```js
+import { createFromnow, ru } from 'react-fromnow';
+
+// initialized
+const useFromnow = createFromnow(ru);
+
+useFromnow(Date.now() + (1e3 * 60 * 4)); // "через 4 минуты"
+```
+
+**with options**
+```js
+import { createFromnow, ua } from 'react-fromnow';
+
+// initialized
+const useFromnow = createFromnow(ua, {
+  now: 'саме зараз', // changed
+  was: '%% тому назад',
+  will: 'через %%',
+});
+
+useFromnow(Date.now()); // "саме зараз"
+```
 
 ## License
 

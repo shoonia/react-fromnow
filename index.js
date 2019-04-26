@@ -1,34 +1,7 @@
-import React from 'react';
+export { default as en } from './en';
+export { default as ua } from './ua';
+export { default as ru } from './ru';
 
-import calculate from './lib/calculate';
-import en from './en';
+export { default as createFromnow } from './createFromnow';
 
-function Fromnow({ tag, date, lang, ...rest }) {
-  const del = new Date(date);
-  const timestamp = del.getTime();
-
-  if (isNaN(timestamp)) {
-    return tag
-      ? React.createElement(tag, rest)
-      : '';
-  }
-
-  if (!tag) {
-    return calculate(timestamp, lang);
-  }
-
-  const attrName = tag === 'time' ? 'dateTime' : 'data-datetime';
-  const props = {
-    ...rest,
-    [attrName]: del.toISOString(),
-  };
-
-  return React.createElement(tag, props, calculate(timestamp, lang));
-}
-
-Fromnow.defaultProps = {
-  tag: 'time',
-  lang: en(),
-};
-
-export default Fromnow;
+export { default } from './Fromnow';

@@ -21,8 +21,7 @@ export default function (ops) {
     }
 
     const pattern = isAgo ? ops.was : ops.will;
-    const titles = periods[period];
-    const val = cyrillicCases(int, titles);
+    const val = cyrillicCases(int, periods[period]);
 
     return pattern.replace(/%%/, `${int} ${val}`);
   }

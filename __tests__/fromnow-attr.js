@@ -2,7 +2,7 @@ import assert from 'assert';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Fromnow from '../index';
+import Fromnow, { ua } from '../index';
 
 const NOW = 1556026229910;
 
@@ -44,4 +44,11 @@ test('Invalid date and no tag', () => {
   const empty = render(<Fromnow date={'0_0'} tag="" />);
 
   equal(empty, '');
+});
+
+test('Set lang', () => {
+  const lang = ua();
+  const { children } = render(<Fromnow date={NOW} lang={lang} />);
+
+  equal(children[0], 'зараз');
 });
