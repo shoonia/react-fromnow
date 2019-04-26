@@ -1,3 +1,5 @@
+import cyrillicCases from './lib/cyrillicCases';
+
 const periods = {
   minute: ['хвилину', 'хвилини', 'хвилин'],
   hour: ['годину', 'години', 'годин'],
@@ -5,21 +7,6 @@ const periods = {
   month: ['місяць', 'місяці', 'місяців'],
   year: ['рік', 'роки', 'років'],
 };
-
-function calcPeriods(int, period) {
-  const cases = [2, 0, 1, 1, 1, 2];
-  const titles = periods[period];
-
-  return titles[
-    (int % 100 > 4 && int % 100 < 20)
-      ? 2
-      : cases[
-      (int % 10 < 5)
-        ? int % 10
-        : 5
-      ]
-  ];
-}
 
 export default function (ops) {
   ops = ops || {
@@ -34,7 +21,8 @@ export default function (ops) {
     }
 
     const pattern = isAgo ? ops.was : ops.will;
-    const val = calcPeriods(int, period);
+    const titles = periods[period];
+    const val = cyrillicCases(int, titles);
 
     return pattern.replace(/%%/, `${int} ${val}`);
   }

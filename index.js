@@ -1,6 +1,6 @@
 import React from 'react';
 
-import calculate from './calculate';
+import calculate from './lib/calculate';
 import en from './en';
 
 function Fromnow({ tag, date, lang, ...rest }) {
