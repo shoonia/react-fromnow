@@ -1,7 +1,7 @@
 {
   "name": "react-fromnow",
   "description": "React component for display time from now (en, ua, ru)",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -24,8 +24,9 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "files": [
+    "lib",
     "index.js",
-    "calculate.js",
+    "createFromnow.js",
     "en.js",
     "ua.js",
     "ru.js"
