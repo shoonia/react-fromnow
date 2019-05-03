@@ -1,7 +1,7 @@
 {
   "name": "react-fromnow",
   "description": "React component for display time from now (en, ua, ru)",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",

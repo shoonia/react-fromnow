@@ -8,19 +8,19 @@ const periods = {
   year: ['рік', 'роки', 'років'],
 };
 
-export default function (ops) {
-  ops = ops || {
+export default function (options) {
+  options = options || {
     now: 'зараз',
     was: '%% тому назад',
     will: 'через %%',
   };
 
-  return function ua(int, period, isAgo) {
+  return function ua(int, period, isPast) {
     if (0 === int) {
-      return ops.now;
+      return options.now;
     }
 
-    const pattern = isAgo ? ops.was : ops.will;
+    const pattern = isPast ? options.was : options.will;
     const val = cyrillicCases(int, periods[period]);
 
     return pattern.replace(/%%/, `${int} ${val}`);

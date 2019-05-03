@@ -75,6 +75,8 @@ Set any false expression `"" | false | null | undefined ` and component return j
 | Russian (Русский)     | "react-fromnow/ru"           |
 | Ukrainian (Українська)| "react-fromnow/ua"           |
 
+[Create language modifier](./docs/lang.md)
+
 
 ```js
 import React from 'react';
@@ -128,7 +130,7 @@ const date = Date.now() - (1e3 * 60 * 60 * 5);
 | Russian (Русский)      | "только что" | "%% назад"      | "через %%"    |
 | Ukrainian (Українська) | "зараз"      | "%% тому назад" | "через %%"    |
 
-## Use `fromnow()`
+## Use `createFromnow()`
 
 ```js
 import { createFromnow } from 'react-fromnow';
