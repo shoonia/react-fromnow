@@ -19,8 +19,22 @@ test('tag', () => {
   equal(props['data-datetime'], toISO(NOW));
 });
 
-test('no tag', () => {
+test('no tag (null)', () => {
   const str = render(<Fromnow date={NOW} tag={null} />);
+
+  equal(str, 'just now');
+  equal(typeof str, 'string');
+});
+
+test('no tag (false)', () => {
+  const str = render(<Fromnow date={NOW} tag={false} />);
+
+  equal(str, 'just now');
+  equal(typeof str, 'string');
+});
+
+test('no tag ("")', () => {
+  const str = render(<Fromnow date={NOW} tag="" />);
 
   equal(str, 'just now');
   equal(typeof str, 'string');

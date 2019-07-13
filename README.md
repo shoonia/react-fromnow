@@ -47,10 +47,10 @@ Default use HTML tag `<time>` [MDN](https://developer.mozilla.org/en-US/docs/Web
 
 ## No tag
 
-Set any false expression `"" | false | null | undefined ` and component return just string.
+Set false expression `false | ""` or `null` and component return just string.
 
 ```js
-<Fromnow tag="" date={Date.now() + (1e3 * 60 * 60)} />
+<Fromnow tag={false} date={Date.now() + (1e3 * 60 * 60)} />
 ```
 ```html
 "1 hour from now"
@@ -136,10 +136,10 @@ const date = Date.now() - (1e3 * 60 * 60 * 5);
 import { createFromnow } from 'react-fromnow';
 
 // initialized
-const useFromnow = createFromnow();
+const fromnow = createFromnow();
 
 // english default
-useFromnow(Date.now() - (1e3 * 60 * 60 * 4)); // "4 hours ago"
+fromnow(Date.now() - (1e3 * 60 * 60 * 4)); // "4 hours ago"
 ```
 
 **language**
@@ -148,9 +148,9 @@ useFromnow(Date.now() - (1e3 * 60 * 60 * 4)); // "4 hours ago"
 import { createFromnow, ru } from 'react-fromnow';
 
 // initialized
-const useFromnow = createFromnow(ru);
+const fromnow = createFromnow(ru);
 
-useFromnow(Date.now() + (1e3 * 60 * 4)); // "через 4 минуты"
+fromnow(Date.now() + (1e3 * 60 * 4)); // "через 4 минуты"
 ```
 
 **with options**
@@ -158,13 +158,13 @@ useFromnow(Date.now() + (1e3 * 60 * 4)); // "через 4 минуты"
 import { createFromnow, ua } from 'react-fromnow';
 
 // initialized
-const useFromnow = createFromnow(ua, {
+const fromnow = createFromnow(ua, {
   now: 'саме зараз', // changed
   was: '%% тому назад',
   will: 'через %%',
 });
 
-useFromnow(Date.now()); // "саме зараз"
+fromnow(Date.now()); // "саме зараз"
 ```
 
 ## License
