@@ -73,3 +73,9 @@ test('createFromnow ru with ops', () => {
 
   equal(calc(NOW - YEAR * 5), '0_0 5 лет 0_0');
 });
+
+test('createFromnow invalid first argument', () => {
+  const calc = createFromnow({});
+
+  equal(calc(NOW), 'just now');
+});
