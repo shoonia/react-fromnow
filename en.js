@@ -14,5 +14,5 @@ export default function (options) {
     const val = (2 > int) ? period : period + 's';
 
     return pattern.replace(/%%/, `${int} ${val}`);
-  }
+  };
 }

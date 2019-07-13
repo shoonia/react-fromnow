@@ -12,5 +12,5 @@ export default function createFromnow(lang, ops) {
     }
 
     return calculate(timestamp, fn);
-  }
+  };
 }

@@ -24,5 +24,5 @@ export default function (options) {
     const val = cyrillicCases(int, periods[period]);
 
     return pattern.replace(/%%/, `${int} ${val}`);
-  }
+  };
 }

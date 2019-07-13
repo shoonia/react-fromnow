@@ -1,4 +1,4 @@
-import Fromnow from './Fromnow'
+import Fromnow from './Fromnow';
 
 export { default as en } from './en';
 export { default as ua } from './ua';
