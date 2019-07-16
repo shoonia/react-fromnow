@@ -69,11 +69,11 @@ Set false expression `false | ""` or `null` and component return just string.
 
 ## Language support
 
-| Language              | `import`                     |
-| --------------------- | ---------------------------- |
-| English               | "react-fromnow/en" (default) |
-| Russian (Русский)     | "react-fromnow/ru"           |
-| Ukrainian (Українська)| "react-fromnow/ua"           |
+| Language              | `import`       |
+| --------------------- | -------------- |
+| English               | "en" (default) |
+| Russian (Русский)     | "ru"           |
+| Ukrainian (Українська)| "ua"           |
 
 [Create language modifier](./docs/lang.md)
 

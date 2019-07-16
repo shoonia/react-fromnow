@@ -1,22 +1,12 @@
-import assert from 'assert';
+import { equal } from 'assert';
+import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from '../config';
 
 import calc from '../lib/calculate';
 import ua from '../ua';
 
-const NOW = 1556026229910; // Tue Apr 23 2019 16:30:29 GMT+0300 (Eastern European Summer Time)
-
-const MIN = 60 * 1e3;
-const HOUR = MIN * 60;
-const DAY = HOUR * 24;
-const MONTH = DAY * 30;
-const YEAR = DAY * 365;
-
-const equal = assert.equal;
 const lang = ua();
 
-Date.now = jest.fn(() => NOW);
-
-// зараз
+// just now
 
 test('зараз', () => {
   equal(calc(NOW, lang), 'зараз');
@@ -48,7 +38,7 @@ test('5 хвилин тому назад', () => {
   equal(calc(NOW - MIN * 5, lang), '5 хвилин тому назад');
 });
 
-// годин
+// hour
 
 test('через 1 годину', () => {
   equal(calc(NOW + HOUR, lang), 'через 1 годину');
@@ -66,7 +56,7 @@ test('5 годин тому назад', () => {
   equal(calc(NOW - HOUR * 5, lang), '5 годин тому назад');
 });
 
-// день
+// day
 
 test('через 1 день', () => {
   equal(calc(NOW + DAY, lang), 'через 1 день');
@@ -102,7 +92,7 @@ test('5 місяців тому назад', () => {
   equal(calc(NOW - MONTH * 5, lang), '5 місяців тому назад');
 });
 
-// рік
+// year
 
 test('через 1 рік', () => {
   equal(calc(NOW + YEAR, lang), 'через 1 рік');

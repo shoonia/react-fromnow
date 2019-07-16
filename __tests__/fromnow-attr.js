@@ -1,14 +1,10 @@
-import assert from 'assert';
+import { equal } from 'assert';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { NOW } from '../config';
 
 import Fromnow, { ua } from '../index';
 
-const NOW = 1556026229910;
-
-Date.now = jest.fn(() => NOW);
-
-const equal = assert.equal;
 const render = Element => renderer.create(Element).toJSON();
 const toISO = date => new Date(date).toISOString();
 

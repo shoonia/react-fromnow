@@ -1,19 +1,8 @@
-import assert from 'assert';
+import { equal } from 'assert';
+import { NOW, MONTH, YEAR } from '../config';
 
 import calc from '../lib/calculate';
 import ua from '../ua';
-
-const NOW = 1556026229910; // Tue Apr 23 2019 16:30:29 GMT+0300 (Eastern European Summer Time)
-
-const MIN = 60 * 1e3;
-const HOUR = MIN * 60;
-const DAY = HOUR * 24;
-const MONTH = DAY * 30;
-const YEAR = DAY * 365;
-
-const equal = assert.equal;
-
-Date.now = jest.fn(() => NOW);
 
 test('change ops', () => {
   const lang = ua({
