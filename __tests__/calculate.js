@@ -1,6 +1,6 @@
 import { equal } from 'assert';
-import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from '../config';
 
+import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from '../util/date';
 import calc from '../lib/calculate';
 import { en } from '../index';
 

@@ -1,12 +1,9 @@
 import { equal } from 'assert';
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { NOW } from '../config';
 
+import { render, toISO } from '../util/helpers';
+import { NOW } from '../util/date';
 import Fromnow, { ua } from '../index';
-
-const render = Element => renderer.create(Element).toJSON();
-const toISO = date => new Date(date).toISOString();
 
 test('tag', () => {
   const { type, props } = render(<Fromnow date={NOW} tag="span" />);

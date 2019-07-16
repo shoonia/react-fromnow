@@ -1,5 +1,5 @@
 import { equal } from 'assert';
-import { NOW, MIN, DAY, MONTH, YEAR } from '../config';
+import { NOW, MIN, DAY, MONTH, YEAR } from '../util/date';
 
 import { createFromnow, ua, ru, en } from '../index';
 

@@ -1,12 +1,9 @@
 import { equal } from 'assert';
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { NOW, HOUR } from '../config';
 
+import { render, toISO } from '../util/helpers';
+import { NOW, HOUR } from '../util/date';
 import Fromnow from '../index';
-
-const render = Element => renderer.create(Element).toJSON();
-const toISO = date => new Date(date).toISOString();
 
 test('just now', () => {
   const { type, props, children } = render(<Fromnow date={NOW} />);
