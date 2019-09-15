@@ -1,8 +1,8 @@
 import { equal } from 'assert';
 import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from '../util/date';
 
-import calc from '../lib/calculate';
-import ru from '../langs/ru';
+import calc from '../src/lib/calculate';
+import ru from '../src/langs/ru';
 
 const lang = ru();
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 import { render, toISO } from '../util/helpers';
 import { NOW, HOUR } from '../util/date';
-import Fromnow from '../index';
+import Fromnow from '../src';
 
 test('just now', () => {
   const { type, props, children } = render(<Fromnow date={NOW} />);

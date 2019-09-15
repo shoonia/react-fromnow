@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import cc from '../lib/cyrillicCases';
+import cc from '../src/lib/cyrillicCases';
 
 const equal = assert.equal;
 const titles = [1, 2, 3];

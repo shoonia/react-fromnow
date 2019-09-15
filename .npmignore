@@ -1,6 +1,7 @@
 node_modules/
 __tests__/
 docs/
+util/
 
 *.log*
 *.tgz*
@@ -9,4 +10,3 @@ docs/
 .eslintrc
 .gitignore
 yarn.lock
-config.js

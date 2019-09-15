@@ -3,7 +3,7 @@ import React from 'react';
 
 import { render, toISO } from '../util/helpers';
 import { NOW } from '../util/date';
-import Fromnow, { ua } from '../index';
+import Fromnow, { ua } from '../src';
 
 test('tag', () => {
   const { type, props } = render(<Fromnow date={NOW} tag="span" />);
