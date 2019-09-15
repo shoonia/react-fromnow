@@ -2,7 +2,7 @@ import { equal } from 'assert';
 import { NOW, MONTH, YEAR } from '../util/date';
 
 import calc from '../lib/calculate';
-import ua from '../ua';
+import ua from '../langs/ua';
 
 test('change ops', () => {
   const lang = ua({

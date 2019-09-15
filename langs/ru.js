@@ -1,4 +1,4 @@
-import cyrillicCases from './lib/cyrillicCases';
+import cyrillicCases from '../lib/cyrillicCases';
 
 const periods = {
   minute: ['минуту', 'минуты', 'минут'],

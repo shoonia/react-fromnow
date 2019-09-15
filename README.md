@@ -104,7 +104,7 @@ ReactDOM.render(
 Use the `%%` key for insert date.
 
 ```js
-import Fromnow, { en } from 'react-fromnow/en';
+import Fromnow, { en } from 'react-fromnow';
 
 const lang = en({
   now: 'just now',

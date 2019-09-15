@@ -2,7 +2,7 @@ import { equal } from 'assert';
 import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from '../util/date';
 
 import calc from '../lib/calculate';
-import ru from '../ru';
+import ru from '../langs/ru';
 
 const lang = ru();
 

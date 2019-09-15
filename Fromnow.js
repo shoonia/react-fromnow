@@ -1,16 +1,14 @@
 import React from 'react';
 
 import calculate from './lib/calculate';
-import en from './en';
+import en from './langs/en';
 
 function Fromnow({ tag, date, lang, ...rest }) {
   const del = new Date(date);
   const timestamp = del.getTime();
 
   if (isNaN(timestamp)) {
-    return tag
-      ? React.createElement(tag, rest)
-      : '';
+    return tag ? React.createElement(tag, rest) : '';
   }
 
   if (!tag) {

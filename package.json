@@ -1,7 +1,7 @@
 {
   "name": "react-fromnow",
   "description": "React component for display time from now (en, ua, ru)",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -10,18 +10,18 @@
     "test": "npm run eslint && npm run jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.8.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.0.1",
-    "eslint-plugin-react": "^7.14.2",
-    "jest": "^24.8.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6"
+    "eslint": "^6.4.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.9.0"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
@@ -32,9 +32,7 @@
     "index.js",
     "createFromnow.js",
     "Fromnow.js",
-    "en.js",
-    "ua.js",
-    "ru.js"
+    "langs"
   ],
   "repository": {
     "type": "git",
