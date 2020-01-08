@@ -1,10 +1,10 @@
-import calculate from './lib/calculate';
-import en from './langs/en';
+import { calculate } from './lib/calculate';
+import { en } from './langs/en';
 
-export default function createFromnow(lang, ops) {
+export const createFromnow = (lang, ops) => {
   const fn = typeof lang === 'function' ? lang(ops) : en(ops);
 
-  return function fromnow(date) {
+  return (date) => {
     const timestamp = new Date(date).getTime();
 
     if (isNaN(timestamp)) {
@@ -13,4 +13,4 @@ export default function createFromnow(lang, ops) {
 
     return calculate(timestamp, fn);
   };
-}
+};

@@ -4,7 +4,7 @@ const DAY = HOUR * 24;
 const MONTH = DAY * 30;
 const YEAR = DAY * 365;
 
-function getPeriods(abs) {
+const getPeriods = (abs) => {
   return [
     [(abs % HOUR) / MIN | 0, 'minute'],
     [(abs % DAY) / HOUR | 0, 'hour'],
@@ -12,9 +12,9 @@ function getPeriods(abs) {
     [(abs % YEAR) / MONTH | 0, 'month'],
     [(abs / YEAR) | 0, 'year'],
   ];
-}
+};
 
-function getInterval(periods) {
+const getInterval = (periods) => {
   let i = periods.length;
 
   while (0 < i--) {
@@ -22,9 +22,9 @@ function getInterval(periods) {
       return periods[i];
     }
   }
-}
+};
 
-export default function (timestamp, lang) {
+export const calculate = (timestamp, lang) => {
   const del = timestamp - Date.now();
   const abs = Math.abs(del);
 
@@ -33,7 +33,7 @@ export default function (timestamp, lang) {
   }
 
   const periods = getPeriods(abs);
-  const [int, period] = getInterval(periods);
+  const interval = getInterval(periods);
 
-  return lang(int, period, (0 > del));
-}
+  return lang(interval[0], interval[1], (0 > del));
+};

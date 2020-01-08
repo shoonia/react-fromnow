@@ -1,5 +1,5 @@
 import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from './util/date';
-import calc from '../src/lib/calculate';
+import { calculate as calc } from '../src/lib/calculate';
 import { en } from '../src';
 
 describe('calculate', () => {

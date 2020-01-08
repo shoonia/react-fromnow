@@ -1,4 +1,4 @@
-import cyrillicCases from '../lib/cyrillicCases';
+import { cyrillicCases } from '../lib/cyrillicCases';
 
 const periods = {
   minute: ['хвилину', 'хвилини', 'хвилин'],
@@ -8,14 +8,14 @@ const periods = {
   year: ['рік', 'роки', 'років'],
 };
 
-export default function (options) {
+export const ua = (options) => {
   options = options || {
     now: 'зараз',
     was: '%% тому назад',
     will: 'через %%',
   };
 
-  return function ua(int, period, isPast) {
+  return (int, period, isPast) => {
     if (0 === int) {
       return options.now;
     }
@@ -23,6 +23,6 @@ export default function (options) {
     const pattern = isPast ? options.was : options.will;
     const val = cyrillicCases(int, periods[period]);
 
-    return pattern.replace(/%%/, `${int} ${val}`);
+    return pattern.replace(/%%/, int + ' ' + val);
   };
-}
+};

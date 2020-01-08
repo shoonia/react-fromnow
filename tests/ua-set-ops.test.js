@@ -1,6 +1,6 @@
 import { NOW, MONTH, YEAR } from './util/date';
-import calc from '../src/lib/calculate';
-import ua from '../src/langs/ua';
+import { calculate as calc } from '../src/lib/calculate';
+import { ua } from '../src';
 
 describe('UA set options', () => {
   it('change ops', () => {

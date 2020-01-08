@@ -1,7 +1,7 @@
 import React from 'react';
 
-import calculate from './lib/calculate';
-import en from './langs/en';
+import { calculate } from './lib/calculate';
+import { en } from './langs/en';
 
 function Fromnow({ tag, date, lang, ...rest }) {
   const del = new Date(date);
@@ -16,10 +16,9 @@ function Fromnow({ tag, date, lang, ...rest }) {
   }
 
   const attrName = tag === 'time' ? 'dateTime' : 'data-datetime';
-  const props = {
-    ...rest,
+  const props = Object.assign(rest, {
     [attrName]: del.toISOString(),
-  };
+  });
 
   return React.createElement(tag, props, calculate(timestamp, lang));
 }

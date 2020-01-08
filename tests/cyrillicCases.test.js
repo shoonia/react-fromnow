@@ -1,4 +1,4 @@
-import cc from '../src/lib/cyrillicCases';
+import { cyrillicCases as cc } from '../src/lib/cyrillicCases';
 
 describe('cyrillicCases', () => {
   const titles = [1, 2, 3];

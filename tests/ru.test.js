@@ -1,7 +1,6 @@
 import { NOW, MIN, HOUR, DAY, MONTH, YEAR } from './util/date';
-
-import calc from '../src/lib/calculate';
-import ru from '../src/langs/ru';
+import { calculate as calc } from '../src/lib/calculate';
+import { ru } from '../src';
 
 describe('RU', () => {
   const lang = ru();
