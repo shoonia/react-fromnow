@@ -3,7 +3,9 @@
     [
       "@babel/preset-env",
       {
-        "targets": "last 1 version"
+        "targets": {
+          "node": 12
+        }
       }
     ],
     "@babel/preset-react"

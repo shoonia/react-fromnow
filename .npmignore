@@ -1,7 +1,6 @@
 node_modules/
-__tests__/
+tests/
 docs/
-util/
 
 *.log*
 *.tgz*
@@ -9,4 +8,5 @@ util/
 .babelrc
 .eslintrc
 .gitignore
-yarn.lock
+.DS_Store
+package-lock.json
