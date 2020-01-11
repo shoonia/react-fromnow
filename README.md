@@ -1,5 +1,7 @@
 # react-fromnow
 
+[![react-fromnow test status](https://github.com/shoonia/react-fromnow/workflows/test/badge.svg)](https://github.com/shoonia/react-fromnow/actions) [![react-fromnow npm version](https://img.shields.io/npm/v/react-fromnow.svg)](https://www.npmjs.com/package/react-fromnow)
+
 React component for display time from now
 
 [Language support](#language-support): English, Українська, Русский
@@ -34,10 +36,10 @@ ReactDOM.render(
 
 ## Set tag
 
-Default use HTML tag `<time>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
+By default use tag `<time>` [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
 
 ```js
-<Fromnow tag="span" date={Date.now() - (1e3 * 60 * 60)} />
+<Fromnow tag="span" date={Date.now() - (1000 * 60 * 60)} />
 ```
 ```html
 <span data-datetime="2019-04-23T12:30:29.910Z">
@@ -50,7 +52,7 @@ Default use HTML tag `<time>` [MDN](https://developer.mozilla.org/en-US/docs/Web
 Set false expression `false | ""` or `null` and component return just string.
 
 ```js
-<Fromnow tag={false} date={Date.now() + (1e3 * 60 * 60)} />
+<Fromnow tag={false} date={Date.now() + (1000 * 60 * 60)} />
 ```
 ```html
 "1 hour from now"
@@ -59,7 +61,7 @@ Set false expression `false | ""` or `null` and component return just string.
 ## Set attributes
 
 ```js
-<Fromnow className="from__now" date={Date.now() - (1e3 * 60 * 60 * 2)} />
+<Fromnow className="from__now" date={Date.now() - (1000 * 60 * 60 * 2)} />
 ```
 ```html
 <time class="from__now" dateTime="2019-04-23T11:30:29.910Z">
@@ -85,7 +87,7 @@ import ReactDOM from 'react-dom';
 import Fromnow, { ua } from 'react-fromnow';
 
 const lang = ua();
-const date = Date.now() - (1e3 * 60 * 60 * 2);
+const date = Date.now() - (1000 * 60 * 60 * 2);
 
 ReactDOM.render(
   <Fromnow date={date} lang={lang} />,
@@ -101,7 +103,7 @@ ReactDOM.render(
 
 ## Language configuration
 
-Use the `%%` key for insert date.
+Use the `%%` key to insert date.
 
 ```js
 import Fromnow, { en } from 'react-fromnow';
@@ -112,7 +114,7 @@ const lang = en({
   will: '%% from now',
 });
 
-const date = Date.now() - (1e3 * 60 * 60 * 5);
+const date = Date.now() - (1000 * 60 * 60 * 5);
 
 <Fromnow date={date} lang={lang} />
 ```
@@ -139,7 +141,7 @@ import { createFromnow } from 'react-fromnow';
 const fromnow = createFromnow();
 
 // english default
-fromnow(Date.now() - (1e3 * 60 * 60 * 4)); // "4 hours ago"
+fromnow(Date.now() - (1000 * 60 * 60 * 4)); // "4 hours ago"
 ```
 
 **language**
@@ -150,7 +152,7 @@ import { createFromnow, ru } from 'react-fromnow';
 // initialized
 const fromnow = createFromnow(ru);
 
-fromnow(Date.now() + (1e3 * 60 * 4)); // "через 4 минуты"
+fromnow(Date.now() + (1000 * 60 * 4)); // "через 4 минуты"
 ```
 
 **with options**
