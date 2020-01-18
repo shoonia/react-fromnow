@@ -16,7 +16,7 @@ function Fromnow({ tag, date, lang, ...rest }) {
   }
 
   const attrName = tag === 'time' ? 'dateTime' : 'data-datetime';
-  const props = Object.assign(rest, {
+  const props = Object.assign({}, rest, {
     [attrName]: del.toISOString(),
   });
 
