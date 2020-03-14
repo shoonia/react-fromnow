@@ -15,21 +15,18 @@ describe('fromnow attr', () => {
     const str = render(<Fromnow date={NOW} tag={null} />);
 
     expect(str).toBe('just now');
-    expect(typeof str).toBe('string');
   });
 
   it('no tag (false)', () => {
     const str = render(<Fromnow date={NOW} tag={false} />);
 
     expect(str).toBe('just now');
-    expect(typeof str).toBe('string');
   });
 
   it('no tag ("")', () => {
     const str = render(<Fromnow date={NOW} tag="" />);
 
     expect(str).toBe('just now');
-    expect(typeof str).toBe('string');
   });
 
   it('className', () => {

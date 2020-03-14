@@ -33,7 +33,7 @@ export const calculate = (timestamp, lang) => {
   }
 
   const periods = getPeriods(abs);
-  const interval = getInterval(periods);
+  const [int, period] = getInterval(periods);
 
-  return lang(interval[0], interval[1], (0 > del));
+  return lang(int, period, (0 > del));
 };

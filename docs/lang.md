@@ -68,7 +68,7 @@ import Fromnow from 'react-fromnow';
 import shortEng from './shortEng';
 
 const lang = shortEng();
-const date = Date.now() - (1e3 * 60 * 60 * 2);
+const date = Date.now() - (1000 * 60 * 60 * 2);
 
 ReactDOM.render(
   <Fromnow date={date} lang={lang} />,
